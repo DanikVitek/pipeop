@@ -95,6 +95,7 @@ macro_rules! pipe {
     () => (());
 }
 
+#[inline(always)]
 pub fn call_with<T, R, F: FnOnce(T) -> R>(f: F, t: T) -> R {
     f(t)
 }
